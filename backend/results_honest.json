@@ -1,0 +1,127 @@
+{
+  "config": {
+    "days": 365,
+    "seed": 42,
+    "base_demand": 150,
+    "demand_std": 25,
+    "seasonal_amplitude": 0.15,
+    "lead_time_mean": 7,
+    "lead_time_std": 2,
+    "unit_cost_mean": 160,
+    "unit_cost_std": 15,
+    "holding_cost_per_unit_day": 0.5,
+    "stockout_penalty": 800,
+    "storage_capacity": 5000,
+    "annual_labor_cost": 510000,
+    "baseline_kwh_per_day": 8000,
+    "energy_variability": 300,
+    "price_per_kwh": 0.12,
+    "incident_base_prob": 0.012,
+    "incident_penalty": 5000
+  },
+  "stats": {
+    "manual": {
+      "total_cost": {
+        "mean": 10036703.025439065,
+        "std": 141171.0115220716,
+        "ci_95": [
+          9763344.24979417,
+          10326122.622312507
+        ]
+      },
+      "stockout_days": {
+        "mean": 0.067,
+        "std": 0.29070775703444857,
+        "ci_95": [
+          0.0,
+          1.0
+        ]
+      },
+      "cost_breakdown": {
+        "supply": 9154036.65155177,
+        "energy": 350406.3738872938,
+        "labor": 509999.99999999785,
+        "compliance": 22260.0
+      }
+    },
+    "rule_based": {
+      "total_cost": {
+        "mean": 9974678.162894681,
+        "std": 174985.96175793474,
+        "ci_95": [
+          9666839.91857627,
+          10353333.319468053
+        ]
+      },
+      "stockout_days": {
+        "mean": 2.302,
+        "std": 1.868902351649224,
+        "ci_95": [
+          0.0,
+          7.0
+        ]
+      },
+      "cost_breakdown": {
+        "supply": 9092678.488389034,
+        "energy": 350434.6745056493,
+        "labor": 509999.99999999785,
+        "compliance": 21565.0
+      }
+    },
+    "single_agent": {
+      "total_cost": {
+        "mean": 9979510.40317231,
+        "std": 176797.05630948543,
+        "ci_95": [
+          9671936.579226034,
+          10364845.487903984
+        ]
+      },
+      "stockout_days": {
+        "mean": 3.595,
+        "std": 2.180590516351018,
+        "ci_95": [
+          0.0,
+          8.0
+        ]
+      },
+      "cost_breakdown": {
+        "supply": 9097247.333090385,
+        "energy": 350388.0700819255,
+        "labor": 509999.99999999785,
+        "compliance": 21875.0
+      }
+    },
+    "multi_agent": {
+      "total_cost": {
+        "mean": 43434614.533924215,
+        "std": 382728.2841859597,
+        "ci_95": [
+          42686413.664586015,
+          44226569.50126168
+        ]
+      },
+      "stockout_days": {
+        "mean": 355.092,
+        "std": 0.644620818776434,
+        "ci_95": [
+          354.0,
+          356.0
+        ]
+      },
+      "cost_breakdown": {
+        "supply": 42551781.20956263,
+        "energy": 350358.3243615831,
+        "labor": 509999.99999999785,
+        "compliance": 22475.0
+      }
+    },
+    "improvements": {
+      "multi_vs_manual_cost_reduction": -332.75779330956266,
+      "multi_vs_manual_stockout_reduction": -529888.0597014925,
+      "annual_savings": -33397911.50848515
+    }
+  },
+  "generated_at": "2025-10-13T01:50:11.218865",
+  "note": "HONEST SIMULATION - no hard-coded multipliers. Only measures supply chain coordination benefits from 3 implemented agents."
+}

@@ -1,0 +1,149 @@
+{
+  "config": {
+    "days": 365,
+    "seed": 42,
+    "bed_count": 500,
+    "annual_operating_cost": 200000000,
+    "supply_chain_pct_of_ops": 0.3,
+    "base_demand_per_bed_day": 0.3,
+    "demand_std_pct": 0.2,
+    "seasonal_amplitude": 0.12,
+    "lead_time_mean": 5,
+    "lead_time_std": 2,
+    "unit_cost_mean": 180,
+    "unit_cost_std": 20,
+    "holding_cost_per_unit_day": 0.6,
+    "stockout_penalty": 1200,
+    "storage_capacity": 4500,
+    "manual_waste_rate": 0.25,
+    "rule_based_waste_rate": 0.18,
+    "single_agent_waste_rate": 0.12,
+    "multi_agent_waste_rate": 0.08,
+    "supply_chain_ftes_manual": 12,
+    "avg_fte_cost_annual": 75000,
+    "benefits_multiplier": 1.35,
+    "rule_based_fte_reduction": 0.15,
+    "single_agent_fte_reduction": 0.3,
+    "multi_agent_fte_reduction": 0.45,
+    "manual_stockout_prob_base": 0.08,
+    "rule_based_stockout_prob_base": 0.05,
+    "single_agent_stockout_prob_base": 0.02,
+    "multi_agent_stockout_prob_base": 0.01
+  },
+  "stats": {
+    "manual": {
+      "total_cost": {
+        "mean": 11852491.189481426,
+        "std": 213660.33024211065,
+        "ci_95": [
+          11451043.732562797,
+          12265836.513904978
+        ]
+      },
+      "stockout_days": {
+        "mean": 29.11,
+        "std": 5.155763764952773,
+        "ci_95": [
+          19.0,
+          39.02499999999998
+        ]
+      },
+      "cost_breakdown": {
+        "supply_chain": 10325398.37496393,
+        "waste": 50375.15707866177,
+        "labor": 1215000.0000000023,
+        "stockout_penalties": 261717.65743883295
+      },
+      "ftes_used": 12.0
+    },
+    "rule_based": {
+      "total_cost": {
+        "mean": 11324878.101526175,
+        "std": 187631.08235296994,
+        "ci_95": [
+          10964485.64890015,
+          11705514.01386389
+        ]
+      },
+      "stockout_days": {
+        "mean": 18.172,
+        "std": 3.940103551938705,
+        "ci_95": [
+          11.0,
+          26.0
+        ]
+      },
+      "cost_breakdown": {
+        "supply_chain": 10094519.10183577,
+        "waste": 24534.156720596064,
+        "labor": 1032750.0000000019,
+        "stockout_penalties": 173074.8429698069
+      },
+      "ftes_used": 10.2
+    },
+    "single_agent": {
+      "total_cost": {
+        "mean": 10999800.503551487,
+        "std": 219490.2564052752,
+        "ci_95": [
+          10599373.185369248,
+          11491205.549788475
+        ]
+      },
+      "stockout_days": {
+        "mean": 8.428,
+        "std": 2.9974682650530267,
+        "ci_95": [
+          3.0,
+          15.0
+        ]
+      },
+      "cost_breakdown": {
+        "supply_chain": 9958295.633665176,
+        "waste": 12981.234964135418,
+        "labor": 850500.0000000069,
+        "stockout_penalties": 178023.6349221653
+      },
+      "ftes_used": 8.399999999999999
+    },
+    "multi_agent": {
+      "total_cost": {
+        "mean": 10963353.74693031,
+        "std": 307459.59287222615,
+        "ci_95": [
+          10451457.708544804,
+          11613109.806760207
+        ]
+      },
+      "stockout_days": {
+        "mean": 7.543,
+        "std": 3.0123331489063423,
+        "ci_95": [
+          2.0,
+          14.0
+        ]
+      },
+      "cost_breakdown": {
+        "supply_chain": 9853098.168705605,
+        "waste": 7053.003721596339,
+        "labor": 668250.0000000012,
+        "stockout_penalties": 434952.57450310956
+      },
+      "ftes_used": 6.6000000000000005
+    },
+    "improvements": {
+      "multi_vs_manual_cost_reduction": 7.501692499380945,
+      "multi_vs_manual_stockout_reduction": 74.08794228787359,
+      "annual_savings": 889137.4425511155,
+      "fte_reduction": 5.3999999999999995
+    }
+  },
+  "generated_at": "2025-10-13T01:54:40.542242",
+  "data_sources": [
+    "AHA 2024 Costs of Caring report",
+    "Premier Healthcare Supply Chain survey 2024",
+    "HFMA Supply Chain best practices",
+    "University of Utah Drug Information Service 2023"
+  ],
+  "note": "Realistic simulation based on published hospital industry data. Conservative estimates for automation benefits."
+}
