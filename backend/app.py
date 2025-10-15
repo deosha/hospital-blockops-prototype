@@ -22,6 +22,19 @@ CORS(app, resources={
 from api.routes_with_blockchain import api_bp
 app.register_blueprint(api_bp, url_prefix='/api')
 
+@app.route('/')
+def index():
+    return {
+        "service": "Hospital BlockOps API",
+        "status": "running",
+        "endpoints": {
+            "health": "/health",
+            "agents": "/api/agents",
+            "blockchain": "/api/blockchain",
+            "scenarios": "/api/scenario/run"
+        }
+    }
+
 @app.route('/health')
 def health_check():
     return {"status": "healthy", "message": "BlockOps backend is running"}
