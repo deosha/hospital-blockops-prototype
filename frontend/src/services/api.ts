@@ -103,7 +103,8 @@ export interface ReasoningTrace {
 // API Configuration
 // =============================================================================
 
-const API_BASE_URL = 'http://localhost:5001';
+// Use environment variable for API URL, fallback to localhost for development
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5001';
 const DEFAULT_TIMEOUT = 10000; // 10 seconds
 const MAX_RETRIES = 3;
 const RETRY_DELAY = 1000; // 1 second
