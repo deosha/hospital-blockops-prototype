@@ -31,6 +31,8 @@ const stateConfig = {
     badgeText: 'text-slate-300',
     label: 'Idle',
     pulse: false,
+    gradient: false,
+    checkmark: false,
   },
   thinking: {
     bg: 'bg-gradient-to-br from-blue-600/20 to-blue-800/20',
@@ -40,6 +42,7 @@ const stateConfig = {
     label: 'Thinking',
     pulse: true,
     gradient: true,
+    checkmark: false,
   },
   negotiating: {
     bg: 'bg-gradient-to-br from-purple-600/20 to-purple-800/20',
@@ -48,6 +51,8 @@ const stateConfig = {
     badgeText: 'text-white',
     label: 'Negotiating',
     pulse: true,
+    gradient: false,
+    checkmark: false,
   },
   executing: {
     bg: 'bg-gradient-to-br from-green-600/20 to-green-800/20',
@@ -56,6 +61,7 @@ const stateConfig = {
     badgeText: 'text-white',
     label: 'Executing',
     pulse: true,
+    gradient: false,
     checkmark: true,
   },
 };
